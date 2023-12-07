@@ -1,0 +1,41 @@
+Create class Node:
+    init(key, value)
+        key
+        value
+        next
+        prev
+
+Create LRU_Cache
+    init(capacity)
+        create a cache: dict {}
+        node_head
+        node_tail
+
+    function get(key)
+        if key is in cache
+            move this node to the head
+            return node.value
+        else
+            return -1
+
+    function set(key, value)
+        if key in cache
+            update value of this node and move to the head
+        else
+            create a new node
+            add_node to the linked list
+            add node to the cache
+
+            if cache_size > capacity
+                remove node from head
+                remove it from cache
+
+Example:
+set(1,1): head <-> (1, 1) <-> tail
+set(2,2): head <-> (2, 2) <-> (1, 1) <-> tail
+set(3,3): head <-> (3, 3) <-> (2, 2) <-> (1, 1) <-> tail
+
+if get(2, 2) -> move (2, 2 to the head)
+    (2, 2) <-> (3, 3) <-> (1, 1)
+
+if remove will remove (1, 1) -> remove in the tail

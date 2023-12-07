@@ -1,0 +1,26 @@
+
+function find_files(suffix, path)
+    if path is not a directory
+        return None
+
+    if suffix is empty
+        return None
+
+    create an empty list store all of the path found
+
+    for each item in the directory at path
+        if item is a directory
+            recursively call find_files with this directory
+            add results to list path
+        else if item is a file and ends with suffix
+            add the path to list path
+
+    return list path
+
+
+Example:
+testdir
+    subdir1
+        a.c
+        a.h
+    subdir2
