@@ -1,0 +1,35 @@
+function huffman_encoding(data)
+    // Phase 1 - Build the huffman tree
+    // Step 1: Count the frequency of each character in data
+    frequency_map =  dict[character, frequency]
+    // Step 2: Create piority queue from the dict of frequency
+    piority_queue = create_piority_queue(frequency_map)
+    // Step 3: Build the Huffman tree
+    // Pop-out two nodes with the minimum frequency from the priority queue created in the above step.
+    while piority_queue has more than one node
+        left_node = pop lowest frequency node from piority_queue
+        right_node = pop next lowest frequency node from piority_queue
+        merged_node = create new node with combined frequency of left and right node
+        merged_node.left = left_node
+        merged_node.right = right_node
+        push merged_node back to piority_queue, continue while
+
+    // Phase 2 - Generate the Encoded Data
+    root_node = the remaining node in piority_queue
+    huffman_code = generate_unique_binary_code(root_node)
+    encode = join all character in data with corresponding huffman_code
+
+function create_piority_queue(frequency_map)
+    piority_queue = new min-heap
+    for each (char, frequency) in frequency_map
+        create a new node with char and frequency
+        add node to piority_queue
+    return piority_queue
+
+function generate_unique_binary_code(root_node, prefix="", codebook={})
+    if node is a leaf
+            add (node.char, code) to codebook
+    else
+        generate_unique_binary_code(node.left, code + "0", codebook)
+        generate_unique_binary_code(node.right, code + "1", codebook)
+    return codebook
