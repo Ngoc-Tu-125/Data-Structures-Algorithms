@@ -1,4 +1,5 @@
 import hashlib
+import pytest
 
 def calc_hash(data):
     sha = hashlib.sha256()
@@ -55,3 +56,11 @@ def test_case_3():
     # Test with empty case
     blockchain = Blockchain()
     assert blockchain.tail is None
+
+## Test Case 4
+def test_case_4():
+    # Test with large data value
+    blockchain = Blockchain()
+    large_data = 'x' * 10000
+    blockchain.add_block("2023-12-09 10:00", large_data)
+    assert blockchain.tail.data == large_data

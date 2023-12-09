@@ -1,4 +1,16 @@
 
+// ============================= Code Design ====================================
+The find_files function uses recursion to navigate through directories.
+
+// ============================= Efficiency ====================================
+Time Efficiency: The function find_files has a time complexity of O(n), where n is the total number of files and directories.
+It checks each file and directory once, but the process can be slow for very large directory trees due to the nature of recursive traversal.
+
+// Conclusion:
+O(n) time.
+
+
+// ============================= Psuedo code ====================================
 function find_files(suffix, path)
     if path is not a directory
         return None

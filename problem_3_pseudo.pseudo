@@ -1,3 +1,21 @@
+// ============================= Code Design ====================================
+// Node Class:
+Represents each character and its frequency, aiding in tree construction.
+Its simplicity and direct representation of tree nodes.
+// Min-Heap (Priority Queue):
+Efficiently retrieves the node with the lowest frequency, crucial for building the Huffman tree.
+Chosen for its O(log n) complexity for insertion and extraction, balancing between time and space efficiency.
+// Use of Python's heapq Module:
+For efficient priority queue operations.
+
+// ============================= Efficiency ====================================
+Frequency Counting: O(n): We iterate through the string once to count the frequency of each character.
+Tree Construction: O(n log n) for creating a min-heap (priority queue) and building the Huffman tree.
+Code Generation: O(n), as it involves a simple traversal of the Huffman tree.
+Encoding and Decoding: O(m), where m is the length of the encoded string. Both operations involve traversing the tree for each bit in the encoded string.
+
+
+// ============================= Psuedo code ====================================
 function huffman_encoding(data)
     // Phase 1 - Build the huffman tree
     // Step 1: Count the frequency of each character in data

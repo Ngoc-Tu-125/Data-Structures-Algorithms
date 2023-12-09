@@ -1,3 +1,27 @@
+
+// ============================= Code Design ====================================
+The LRU Cache uses a hash map for fast lookups and a doubly linked list for maintaining the order of items.
+So, we need to using hash map and linked list to quickly identify and remove the least recently used items.
+
+// Choose Doubly Linked List:
+A doubly linked list is used instead of a singly linked list to facilitate quick removals not only from the head but also from the tail,
+which is essential for the LRU eviction policy.
+
+
+// ============================= Efficiency ====================================
+// get Operation
+First, The get operation will lookup the hash map, this operation is O(1) because hash maps provide constant time complexity for lookups.
+After that, will updating access order. Due to the nature of a doubly linked list, these operations are also O(1), as they don't require traversing the list.
+
+// set Operation
+Same with get, set operation lookup the hash map first.
+After that, will insert or updating the node. Adding to the head is O(1) because it only involves adjusting a few pointers.
+With cache over capacity: remove tail, remove operation still O(1) because the nature of a doubly linked list
+
+// Conclusion:
+Both get and set operations in O(1) time.
+
+// ============================= Psuedo code ====================================
 Create class Node:
     init(key, value)
         key

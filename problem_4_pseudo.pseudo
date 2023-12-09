@@ -1,0 +1,23 @@
+// ============================= Code Design ====================================
+// Recursive Approach
+The recursive DFS was chosen due to the hierarchical nature of the groups, which naturally lends itself to a tree-like structure.
+This approach simplifies the traversal logic.
+
+// ============================= Efficiency ====================================
+In the worst case, every group and subgroup is visited exactly once.
+Therefore, the time complexity is O(n), where n is the total number of groups and subgroups.
+
+// ============================= Psuedo code ====================================
+function is_user_in_group(user, group)
+    // Check if user is in the current group's users list
+    if user is in group.users
+        return True
+
+    // Iterate through each subgroup in the current group
+    for each subgroup in group.groups
+        // Recursively check if user is in the subgroup
+        if is_user_in_group(user, subgroup) is True
+            return True
+
+    // User not found in this group or any of its subgroups
+    return False

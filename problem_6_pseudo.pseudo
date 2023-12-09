@@ -1,0 +1,17 @@
+// ============================= Code Design ====================================
+// union
+The algorithm iterates through both lists and adds all elements to a set, ensuring that each element only appears once.
+The set is then converted back into a linked list.
+// intersection
+the first list's elements are added to a set. Then, as the second list is iterated, each element is checked against the set.
+If an element is in the set, it's added to the intersection set, which is finally converted into a linked list.
+
+// ============================= Efficiency ====================================
+// union
+The time complexity for the union function is O(n + m)
+This is because each list is traversed once to add elements to a set
+// intersection
+The time complexity for the union intersection is O(n + m)
+We traverse each list once, and set operations
+
+// ============================= Psuedo code ====================================
