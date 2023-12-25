@@ -67,8 +67,10 @@ def rearrange_digits(input_list):
     # Build the two numbers from the sorted array
     number1, number2 = 0, 0
     for i, num in enumerate(input_list):
+        # If index is even, append to number1
         if i % 2 == 0:
             number1 = number1 * 10 + num
+        # If index is odd, append to number2
         else:
             number2 = number2 * 10 + num
 
