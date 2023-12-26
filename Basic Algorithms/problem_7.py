@@ -10,6 +10,8 @@
     Insert: O(n).  n is the number of parts in the path.
     Lookup: O(n).  n is the number of parts in the path.
 
+Each operation requires traversing or constructing a chain of nodes corresponding to the segments of the path.
+
 '''
 
 ## A RouteTrie will store our routes and their associated handlers
@@ -112,6 +114,7 @@ router.add_handler("/home/about", "about handler")  # add a route
 
 ## some lookups with the expected output
 print(router.lookup("/")) # should print 'root handler'
+print(router.lookup("")) # should print 'root handler'
 print(router.lookup("/home")) # should print 'not found handler' or None if you did not implement one
 print(router.lookup("/home/about")) # should print 'about handler'
 print(router.lookup("/home/about/")) # should print 'about handler' or None if you did not handle trailing slashes

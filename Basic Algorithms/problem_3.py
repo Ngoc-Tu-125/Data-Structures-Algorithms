@@ -3,9 +3,16 @@
   + Uses a custom merge sort to sort the array in descending order, ensuring an O(nlog(n)) time complexity.
   + It alternately picks digits from the sorted array to form two numbers.
   + The function ensures that the two formed numbers have the maximum possible sum and that their digit counts do not differ by more than 1.
+  + Merge Sort:
+    * The merge_sort function is customized to sort the array in descending order. This sorting ensures that the highest digits are placed first when forming the numbers,
+    maximizing their sum.
+    * Merge sort employs a divide-and-conquer strategy, dividing the array into halves, sorting them independently, and then merging them.
+  + Once the array is sorted in descending order, the rearrange_digits function alternates between picking digits for forming two numbers.
+  + By sorting the array in descending order and alternately picking digits, the function maximizes the sum of the two numbers formed.
 
 - Efficiency:
-  + Time complexity: O(log(n)) due to merge sort
+  + Time complexity: O(nlog(n)) due to merge sort.
+  This is because the array is divided into halves (log(n) divisions) and each of these divisions requires a linear time merge operation (n).
 
 '''
 def merge_sort(array):
@@ -87,3 +94,10 @@ def test_function(test_case):
 # Test cases
 test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_function([[4, 6, 2, 5, 9, 8], [964, 852]])
+# Test with larger numbers will failed because the range of function is [0,9] => Failed
+test_function([[10, 20, 30, 40, 50], [5040, 310]])
+# Test with an empty array
+test_function([[], [0, 0]])
+# Test with All Same Digits
+test_function([[7, 7, 7, 7], [77, 77]])
+

@@ -2,9 +2,15 @@
 - Code Design:
   + Using binary search because the good time complexity of it.
   + The function first determines which half of the array is sorted and then decides where to search for the target.
+  + In each iteration, the algorithm calculates a mid-point (mid). This is the potential candidate for the target number.
+  + If the elements at start to mid are sorted (input_list[start] <= input_list[mid]), the algorithm checks if the target is within this range.
+  + If the elements at mid to end are sorted, a similar approach is followed for this half.
+
+  + The function returns -1 for an empty array
 
 - Efficiency:
-  + Time complexity: O(log(n)) due to binary search
+  + Time complexity: O(log(n)) due to binary search.
+  + The rotated_array_search function splits the search space in half during each iteration.
 
 '''
 

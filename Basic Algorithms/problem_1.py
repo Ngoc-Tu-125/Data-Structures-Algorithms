@@ -1,9 +1,16 @@
 '''
 - Code Design:
   + Using binary search because the good time complexity of it.
+  + First, The square root of a number is always less than or equal to the number itself. It's mean that the square [from 0 to number].
+  + In each iteration of the loop, the algorithm calculates a mid-point (mid) of the current range.
+  + If the square of the mid-point (squared) is equal to the input number, the algorithm returns mid as the square root.
+  + If squared is less than number, it means the square root must be higher than mid, so the algorithm adjusts the lower bound of the range to mid + 1.
+  + If squared is more than number, it indicates the square root is less than mid, leading to the adjustment of the upper bound to mid - 1.
+  + For numbers 0 and 1, the square root is the number itself.
 
 - Efficiency:
-  + Time complexity: O(log(n)) due to binary search
+  + Time complexity: O(log(n)) due to binary search.
+  This is because with each iteration of the while loop, the search interval is halved, following the principle of binary search.
 
 '''
 
