@@ -12,6 +12,8 @@
 
 - Efficiency:
   + Time complexity:  O(n). Each element in the array is swapped at most once.
+  + Space complexity: O(1). The algorithm uses a constant amount of space,
+  as it operates directly on the input array and only requires a few pointer variables (low, mid, high) for its operations.
 
 '''
 

@@ -11,6 +11,8 @@
 - Efficiency:
   + Time complexity: O(log(n)) due to binary search.
   This is because with each iteration of the while loop, the search interval is halved, following the principle of binary search.
+  + Space complexity: O(1). The algorithm uses a fixed amount of space regardless of the input size. It only requires a few variables to store
+  the bounds of the search (low and high), the midpoint (mid), and the squared value of the midpoint (squared)
 
 '''
 

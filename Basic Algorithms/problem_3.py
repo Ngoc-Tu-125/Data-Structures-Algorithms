@@ -13,6 +13,8 @@
 - Efficiency:
   + Time complexity: O(nlog(n)) due to merge sort.
   This is because the array is divided into halves (log(n) divisions) and each of these divisions requires a linear time merge operation (n).
+  + Space complexity: O(n) primarily due to the recursive nature of merge sort. In each recursive call, new arrays (left_half and right_half) are created,
+  which collectively can take up to n space in total
 
 '''
 def merge_sort(array):

@@ -10,7 +10,9 @@
 
 - Efficiency:
   + Time complexity: O(log(n)) due to binary search.
-  + The rotated_array_search function splits the search space in half during each iteration.
+  The rotated_array_search function splits the search space in half during each iteration.
+  + Space complexity: O(1). The algorithm uses a constant amount of space, as it only requires a few variables to hold the indices (start, mid, end)
+  and does not use any additional data structures
 
 '''
 

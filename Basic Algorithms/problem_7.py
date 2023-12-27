@@ -9,6 +9,9 @@
   + Time complexity:
     Insert: O(n).  n is the number of parts in the path.
     Lookup: O(n).  n is the number of parts in the path.
+  + Space complexity:
+    The space complexity for both insert and lookup operations is O(n * m), where 'n' is the number of paths and 'm' is the average number of parts in each path.
+    The Trie structure uses space proportional to the total number of parts across all paths, as each part is stored in a separate node.
 
 Each operation requires traversing or constructing a chain of nodes corresponding to the segments of the path.
 

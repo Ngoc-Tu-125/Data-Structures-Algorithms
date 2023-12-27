@@ -6,6 +6,7 @@
 
 - Efficiency:
   + Time complexity: O(n). It goes through the list only once.
+  + Space complexity: O(1). The function only uses a fixed amount of additional space for the min_val and max_val variables.
 
 '''
 
